@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lisheapp/home_page.dart';
+import 'package:flutter/services.dart';
+import 'package:lisheapp/pages/login_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,6 +12,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarIconBrightness: Brightness.dark, // Dark icons
+      statusBarBrightness: Brightness.light, // For iOS
+    ));
     return MaterialApp(
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
